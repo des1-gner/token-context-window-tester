@@ -51,7 +51,8 @@ def create_200k_word_pdf(filename="test_200k_words.pdf"):
     
     # Generate content
     print("Generating content...")
-    content_text = generate_test_content(200000)
+    # gives us Estimated token count: 176,291 in tiktoken (in the notebook)
+    content_text = generate_test_content(140000)
     
     # Split into chunks for better PDF formatting
     words = content_text.split()
